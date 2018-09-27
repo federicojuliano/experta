@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Workspaces eclipse\expertaart\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3318123832.index
+4080755254.index
+1122291289.index
+2004840981.index
+3671644699.index
