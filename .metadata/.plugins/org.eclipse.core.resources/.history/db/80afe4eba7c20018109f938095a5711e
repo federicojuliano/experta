@@ -1,0 +1,30 @@
+package matrices.manager;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import matrices.entities.MatrizCubicaEntity;
+import matrices.manager.MatrizManagerImpl;
+
+public class MatrizManagerTest {
+
+	
+	@Test
+	public void actualizarCeldaTest() throws Exception {
+		int dimension = 4;
+		MatrizManagerImpl matrizManager = new MatrizManagerImpl(dimension);
+		MatrizCubicaEntity matriz = matrizManager.getMatriz();
+		int valorNuevo = 58;
+		matrizManager.actualizarCelda(2, 2, 2, valorNuevo);
+		Assert.assertEquals(valorNuevo, matriz.getMatriz()[2][2][2]);
+
+	}
+	
+	@Test
+	public void executeTest() throws Exception {
+		int dimensionMatriz = 0;
+		MatrizManagerImpl matrizManager = new MatrizManagerImpl(dimensionMatriz);
+		String respuesta = matrizManager.execute("update 2 2 2 45");
+		System.out.println(respuesta);
+	}
+}

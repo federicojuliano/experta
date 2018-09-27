@@ -1,0 +1,11 @@
+package matrices.sei;
+
+import matrices.utils.MatrizUtils;
+
+public class MatrizSEI {
+
+	public String execute(String query) {
+		MatrizUtils.determinarOperacion("");
+		return null;
+	}
+}

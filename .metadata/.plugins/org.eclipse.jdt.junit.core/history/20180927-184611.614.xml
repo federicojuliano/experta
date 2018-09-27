@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MatrizUtilsTest" project="matrices" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="matrices.utils.MatrizUtilsTest" time="0.001">
+    <testcase name="determinarOperacionMinusculaTest" classname="matrices.utils.MatrizUtilsTest" time="0.001"/>
+    <testcase name="determinarOperacionMayusculaTest" classname="matrices.utils.MatrizUtilsTest" time="0.0"/>
+  </testsuite>
+</testrun>

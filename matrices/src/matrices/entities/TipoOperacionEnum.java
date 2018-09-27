@@ -4,7 +4,9 @@ public enum TipoOperacionEnum {
 
 	UPDATE("update"),
 	
-	QUERY("query");
+	QUERY("query"),
+	
+	OPERACION_NO_RECONOCIDA("operacion no reconocida");
 	
 	private String descripcion;
 
@@ -15,6 +17,5 @@ public enum TipoOperacionEnum {
 	TipoOperacionEnum(String operacion) {
 		this.descripcion = operacion;
 	}
-	
 	
 }

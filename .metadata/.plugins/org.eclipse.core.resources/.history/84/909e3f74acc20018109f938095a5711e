@@ -1,0 +1,21 @@
+package matrices.ejecucion;
+
+import org.junit.Test;
+
+import matrices.manager.MatrizManagerImpl;
+import matrices.utils.EjecucionDTO;
+import matrices.utils.MatrizUtils;
+
+public class PruebaDelCodigo {
+
+	@Test
+	public void pruebaCodigoDesdeArchivo() {
+		EjecucionDTO response = MatrizUtils.cargarDesdeArchivo("EJECUCION.txt");
+		MatrizManagerImpl manejadorMatrices = response.getMatrizManager();
+		String salida;
+		for (String request : response.getRequestList()) {
+			salida = manejadorMatrices.execute(request);
+			System.out.println(salida);
+		}
+	}
+}

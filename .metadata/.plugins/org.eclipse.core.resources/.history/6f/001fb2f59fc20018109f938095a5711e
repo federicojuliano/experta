@@ -1,0 +1,23 @@
+package matrices.sei;
+
+import matrices.entities.TipoOperacionEnum;
+import matrices.manager.MatrizManager;
+import matrices.manager.MatrizManagerImpl;
+import matrices.utils.MatrizUtils;
+
+public class MatrizSEI {
+
+	public String execute(String query) {
+		TipoOperacionEnum tipoOperacion = MatrizUtils.determinarOperacion("");
+		MatrizManagerImpl matrizManager = new MatrizManagerImpl(dimensionMatriz);
+		switch (tipoOperacion) {
+		case QUERY:
+			
+			break;
+
+		default:
+			break;
+		}
+		return null;
+	}
+}

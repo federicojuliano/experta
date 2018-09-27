@@ -1,0 +1,26 @@
+package matrices.utils;
+
+import matrices.manager.MatrizManagerImpl;
+
+public class EjecucionDTO {
+
+	private MatrizManagerImpl matrizManager;
+	
+	private String[] requestList;
+
+	public MatrizManagerImpl getMatrizManager() {
+		return matrizManager;
+	}
+
+	public void setMatrizManager(MatrizManagerImpl matrizManager) {
+		this.matrizManager = matrizManager;
+	}
+
+	public String[] getRequestList() {
+		return requestList;
+	}
+
+	public void setRequestList(String[] requestList) {
+		this.requestList = requestList;
+	}
+}

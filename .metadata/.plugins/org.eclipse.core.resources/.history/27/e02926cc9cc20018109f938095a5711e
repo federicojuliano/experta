@@ -1,0 +1,40 @@
+package matrices.manager;
+
+import matrices.entities.MatrizCubicaEntity;
+
+/**
+ * @author usuario
+ * Clase manejadora de matrices
+ */
+public class MatrizManagerImpl {
+
+	private MatrizCubicaEntity matriz;
+
+	/** 
+	 * Devuelve false si no se pudo hacer la actualizacion.<br/>
+	 * Valores validos x, y, z: de 1 hasta la dimension de la matriz, inclusive.<br/>
+	 * Valores validos w: de -109 hasta 109, inclusive.
+	 **/
+	public boolean actualizarCelda(int x, int y, int z, int w, MatrizCubicaEntity matriz) {
+		if(x < 1 || x > matriz.getDimension()
+				|| y < 1 || y > matriz.getDimension()
+				|| z < 1 || z > matriz.getDimension()
+				|| w < -109 || w > 109) {
+			System.out.println("Argumentos de actualizacion de celda invalidos.");
+			return false;
+		}
+		matriz.getMatriz()[x][y][z] = w;
+		return true;
+	}
+
+	public int sumarValores(int x1, int y1, int z1, int x2, int y2, int z2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	private void construirMatriz(int dimension) throws Exception {
+		this.matriz = new MatrizCubicaEntity(dimension);
+		return;
+	}
+
+}

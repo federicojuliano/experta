@@ -1,0 +1,19 @@
+package matrices.entities;
+
+public enum TipoOperacionEnum {
+
+	UPDATE("update"),
+	
+	QUERY("query");
+	
+	private String descripcion;
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	TipoOperacionEnum(String operacion) {
+		this.descripcion = operacion;
+	}
+	
+}

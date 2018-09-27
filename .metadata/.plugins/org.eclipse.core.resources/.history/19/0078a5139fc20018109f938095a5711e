@@ -1,0 +1,16 @@
+package matrices.utils;
+
+import matrices.entities.TipoOperacionEnum;
+
+public final class MatrizUtils {
+
+	static TipoOperacionEnum determinarOperacion(String operacionString) {
+		for (TipoOperacionEnum tipoOperacion : TipoOperacionEnum.values()) {
+			if(tipoOperacion.getDescripcion().equalsIgnoreCase(operacionString)) {
+				return tipoOperacion;
+			}
+		}
+		System.out.println("Tipo de operacion no reconocida.");
+		return null;
+	}
+}

@@ -1,0 +1,9 @@
+package matrices.sei;
+
+public class MatrizSEI {
+
+	public String execute(String query) {
+		
+		return null;
+	}
+}

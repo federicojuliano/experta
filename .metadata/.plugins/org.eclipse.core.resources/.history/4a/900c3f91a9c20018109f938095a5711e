@@ -1,0 +1,29 @@
+package matrices.utils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import matrices.manager.MatrizManagerImpl;
+
+public class EjecucionDTO {
+
+	private MatrizManagerImpl matrizManager;
+	
+	private List<String> requestList = new ArrayList<>();
+
+	public MatrizManagerImpl getMatrizManager() {
+		return matrizManager;
+	}
+
+	public void setMatrizManager(MatrizManagerImpl matrizManager) {
+		this.matrizManager = matrizManager;
+	}
+
+	public String[] getRequestList() {
+		return requestList;
+	}
+
+	public void setRequestList(String[] requestList) {
+		this.requestList = requestList;
+	}
+}

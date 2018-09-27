@@ -1,0 +1,13 @@
+package matrices.ejecucion;
+
+import org.junit.Test;
+
+import matrices.manager.MatrizManagerImpl;
+
+public class PruebaDelCodigo {
+
+	@Test
+	public void pruebaCodigoDesdeArchivo() {
+		
+	}
+}

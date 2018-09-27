@@ -1,0 +1,28 @@
+package matrices.utils;
+
+import java.io.File;
+import java.util.Scanner;
+
+import matrices.entities.TipoOperacionEnum;
+
+public final class MatrizUtils {
+
+	public static TipoOperacionEnum determinarOperacion(String operacionString) {
+		for (TipoOperacionEnum tipoOperacion : TipoOperacionEnum.values()) {
+			if(tipoOperacion.getDescripcion().equalsIgnoreCase(operacionString)) {
+				return tipoOperacion;
+			}
+		}
+		System.out.println("Tipo de operacion no reconocida.");
+		return null;
+	}
+	
+	public static EjecucionDTO cargarDesdeArchivo(String nombreArchivo) {
+		File file = new File(nombreArchivo);
+		Scanner sc = null;
+		try {
+			
+			sc = new Scanner(file);
+			cantNodos = sc.nextInt();
+	}
+}

@@ -1,1 +1,5 @@
 1538070253638	Move compilation unit
+1538083426264	Rename type 'MatrizEntity'
+1538084315072	Move compilation unit
+1538085633489	Rename local variable 'query'
+1538086012534	Rename local variable 'parametros'

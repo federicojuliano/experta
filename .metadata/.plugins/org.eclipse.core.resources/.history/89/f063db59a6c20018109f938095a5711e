@@ -1,0 +1,85 @@
+package matrices.manager;
+
+import matrices.entities.MatrizCubicaEntity;
+import matrices.entities.TipoOperacionEnum;
+import matrices.entities.TipoRespuesta;
+import matrices.utils.MatrizUtils;
+
+/**
+ * @author usuario Clase manejadora de matrices
+ */
+public class MatrizManagerImpl implements MatrizManager {
+
+	private MatrizCubicaEntity matriz;
+
+	/**
+	 * Constructor parametrizado
+	 * 
+	 * @param dimensionMatriz
+	 * @throws Exception
+	 */
+	public MatrizManagerImpl(int dimensionMatriz) throws Exception {
+		construirMatriz(dimensionMatriz);
+	}
+
+	private void construirMatriz(int dimension) throws Exception {
+		this.matriz = new MatrizCubicaEntity(dimension);
+		return;
+	}
+
+	/** Ejemplos de request:<br/>
+	 * UPDATE 2 2 2 55 <br/>
+	 * QUERY 1 1 1 2 2 2
+	 * @param request
+	 * @return
+	 */
+	public String execute(String request) {
+
+		String[] params = request.split(" ");
+		TipoOperacionEnum tipoOperacion = MatrizUtils.determinarOperacion(params[0]);
+		String respuesta = null;
+
+		switch (tipoOperacion) {
+		case QUERY:
+			this.sumarValores(Integer.valueOf(params[1]), Integer.valueOf(params[2]), Integer.valueOf(params[3]), Integer.valueOf(params[4]), Integer.valueOf(params[5], Integer.valueOf(params[6])
+			break;
+		case UPDATE:
+			boolean actualizacionOK = this.actualizarCelda(Integer.valueOf(params[1]), Integer.valueOf(params[2]), Integer.valueOf(params[3]), Integer.valueOf(params[4]));
+			if (!actualizacionOK) {
+				return TipoRespuesta.ERROR.getDescripcion();
+			}
+			break;
+		default:
+			return TipoRespuesta.ERROR.getDescripcion();
+		}
+		return respuesta;
+	}
+
+	/**
+	 * Devuelve false si no se pudo hacer la actualizacion.<br/>
+	 * Valores validos x, y, z: de 1 hasta la dimension de la matriz,
+	 * inclusive.<br/>
+	 * Valores validos w: de -109 hasta 109, inclusive.
+	 **/
+	@Override
+	public boolean actualizarCelda(int x, int y, int z, int w) {
+		if (x < 1 || x > matriz.getDimension() || y < 1 || y > matriz.getDimension() || z < 1
+				|| z > matriz.getDimension() || w < -109 || w > 109) {
+			System.out.println("Argumentos de actualizacion de celda invalidos.");
+			return false;
+		}
+		matriz.getMatriz()[x][y][z] = w;
+		return true;
+	}
+
+	@Override
+	public int sumarValores(int x1, int y1, int z1, int x2, int y2, int z2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public MatrizCubicaEntity getMatriz() {
+		return matriz;
+	}
+
+}

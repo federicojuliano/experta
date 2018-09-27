@@ -1,0 +1,34 @@
+package matrices.sei;
+
+import matrices.entities.TipoOperacionEnum;
+import matrices.entities.TipoRespuesta;
+import matrices.manager.MatrizManager;
+import matrices.manager.MatrizManagerImpl;
+import matrices.utils.MatrizUtils;
+
+public class MatrizSEI {
+
+	public String execute(String request) {
+		String[] parametros = request.split(" ");
+		TipoOperacionEnum tipoOperacion = MatrizUtils.determinarOperacion("");
+		String respuesta = null;
+		try {
+			int dimensionMatriz = 0;
+			MatrizManagerImpl matrizManager = new MatrizManagerImpl(dimensionMatriz);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TipoRespuesta.ERROR.getDescripcion();
+		}
+		switch (tipoOperacion) {
+		case QUERY:
+
+			break;
+		case UPDATE:
+
+			break;
+		default:
+			return TipoRespuesta.ERROR.getDescripcion();
+		}
+		return respuesta;
+	}
+}

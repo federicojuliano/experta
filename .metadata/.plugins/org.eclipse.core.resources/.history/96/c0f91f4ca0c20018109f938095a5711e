@@ -1,0 +1,14 @@
+package matrices.entities;
+
+public enum TipoRespuesta {
+
+	SUCCESS("success"),
+	
+	ERROR("error");
+	
+	private String descripcion;
+	
+	TipoRespuesta(String descripcion){
+		this.descripcion = descripcion;
+	}
+}
