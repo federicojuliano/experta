@@ -1,0 +1,21 @@
+package matrices;
+
+import org.junit.Test;
+
+import matrices.entities.MatrizEntity;
+import matrices.manager.MatrizManagerImpl;
+
+public class MatrizManagerTest {
+
+	
+	@Test
+	public void actualizarCeldaTest() throws Exception {
+		MatrizManagerImpl matrizManager = new MatrizManagerImpl();
+		int dimension = 4;
+		MatrizEntity matriz = matrizManager.construirMatriz(dimension);
+		int valorNuevo = 58;
+		matrizManager.actualizarCelda(2, 2, 2, valorNuevo, matriz);
+		Assert.assertEquals(valorNuevo, matriz.getMatriz()[2][2][2]);
+
+	}
+}

@@ -1,0 +1,18 @@
+package matrices;
+
+import org.junit.Test;
+
+import matrices.entities.MatrizEntity;
+import matrices.manager.MatrizManagerImpl;
+
+public class MatrizManagerTest {
+
+	
+	@Test
+	public void actualizarCeldaTest() {
+		MatrizManagerImpl matrizManager = new MatrizManagerImpl();
+		int dimension = 4;
+		MatrizEntity matriz = matrizManager.construirMatriz(dimension);
+		matrizManager.actualizarCelda(2, 2, 2, 58, matriz);
+	}
+}

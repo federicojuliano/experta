@@ -1,0 +1,10 @@
+package matrices.entities;
+
+public class MatrizEntity {
+
+	private int[][][] matriz;
+	
+	public MatrizEntity(int dimension) {
+		this.matriz = new int[dimension][dimension][dimension];
+	}
+}

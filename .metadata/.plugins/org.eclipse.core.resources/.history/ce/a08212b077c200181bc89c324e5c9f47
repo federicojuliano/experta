@@ -1,0 +1,10 @@
+package matrices.utils;
+
+import matrices.entities.TipoOperacionEnum;
+
+public class MatrizUtils {
+
+	public TipoOperacionEnum determinarOperacion(String operacionString) {
+		
+	}
+}

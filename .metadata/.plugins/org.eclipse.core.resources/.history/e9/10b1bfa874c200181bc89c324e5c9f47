@@ -1,0 +1,8 @@
+package matrices.manager;
+
+import matrices.entities.MatrizEntity;
+
+public interface MatrizManager {
+
+	public boolean actualizarCelda(int x, int y, int z, MatrizEntity matriz);
+}
