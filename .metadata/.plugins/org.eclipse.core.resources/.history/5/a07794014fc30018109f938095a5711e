@@ -82,16 +82,12 @@ public class MatrizManagerImpl implements MatrizManager {
 				mat = x1;
 				matStart = false;
 			}
-			for(int fi = 1 ; fi <= this.getMatriz().getDimension() ; fi++) {
+			for(int fi = 0 ; fi <= this.getMatriz().getDimension() ; fi++) {
 				if(fiStart) {
 					fi = y1;
-					fiStart = false;
+					matStart = false;
 				}
-				for(int co = 1 ; co <= this.getMatriz().getDimension() ; co++) {
-					if(coStart) {
-						co = z1;
-						coStart = false;
-					}
+				for(int co = z1 ; co <= this.getMatriz().getDimension() ; co++) {
 					suma += this.getMatriz().getMatriz()[mat-1][fi-1][co-1];
 					if(mat == x2 && fi == y2 && co == z2) {
 						return suma;

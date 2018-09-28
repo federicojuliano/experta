@@ -10,22 +10,6 @@ public class MatrizManagerTest {
 
 	
 	@Test
-	public void executeUpdateTest() throws Exception {
-		int dimensionMatriz = 10;
-		MatrizManagerImpl matrizManager = new MatrizManagerImpl(dimensionMatriz);
-		String respuesta = matrizManager.execute("update 2 2 2 45");
-		System.out.println(respuesta);
-	}
-	
-	@Test
-	public void executeQueryTest() throws Exception {
-		int dimensionMatriz = 10;
-		MatrizManagerImpl matrizManager = new MatrizManagerImpl(dimensionMatriz);
-		String respuesta = matrizManager.execute("query 2 2 2 3 3 3");
-		System.out.println(respuesta);
-	}
-	
-	@Test
 	public void actualizarCeldaTest() throws Exception {
 		int dimension = 4;
 		MatrizManagerImpl matrizManager = new MatrizManagerImpl(dimension);
@@ -33,6 +17,14 @@ public class MatrizManagerTest {
 		int valorNuevo = 58;
 		matrizManager.actualizarCelda(2, 2, 2, valorNuevo);
 		Assert.assertEquals(valorNuevo, matriz.getMatriz()[2][2][2]);
-		
+
+	}
+	
+	@Test
+	public void executeTest() throws Exception {
+		int dimensionMatriz = 10;
+		MatrizManagerImpl matrizManager = new MatrizManagerImpl(dimensionMatriz);
+		String respuesta = matrizManager.execute("update 2 2 2 45");
+		System.out.println(respuesta);
 	}
 }

@@ -67,39 +67,14 @@ public class MatrizManagerImpl implements MatrizManager {
 			System.out.println("Argumentos de actualizacion de celda invalidos.");
 			return false;
 		}
-		matriz.getMatriz()[x-1][y-1][z-1] = w;
+		matriz.getMatriz()[x][y][z] = w;
 		return true;
 	}
 
 	@Override
 	public int sumarValores(int x1, int y1, int z1, int x2, int y2, int z2) {
-		int suma = 0;
-		boolean matStart = true;
-		boolean fiStart = true;
-		boolean coStart = true;
-		for(int mat = 0 ; mat <= this.getMatriz().getDimension() ; mat++) {
-			if(matStart) {
-				mat = x1;
-				matStart = false;
-			}
-			for(int fi = 1 ; fi <= this.getMatriz().getDimension() ; fi++) {
-				if(fiStart) {
-					fi = y1;
-					fiStart = false;
-				}
-				for(int co = 1 ; co <= this.getMatriz().getDimension() ; co++) {
-					if(coStart) {
-						co = z1;
-						coStart = false;
-					}
-					suma += this.getMatriz().getMatriz()[mat-1][fi-1][co-1];
-					if(mat == x2 && fi == y2 && co == z2) {
-						return suma;
-					}
-				}
-			}
-		}
-		return suma;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	public MatrizCubicaEntity getMatriz() {

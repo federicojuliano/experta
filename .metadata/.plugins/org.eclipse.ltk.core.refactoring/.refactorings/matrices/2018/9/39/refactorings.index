@@ -3,3 +3,6 @@
 1538084315072	Move compilation unit
 1538085633489	Rename local variable 'query'
 1538086012534	Rename local variable 'parametros'
+1538157817366	Rename local variable 'i'
+1538157824438	Rename local variable 'j'
+1538157834536	Rename local variable 'k'

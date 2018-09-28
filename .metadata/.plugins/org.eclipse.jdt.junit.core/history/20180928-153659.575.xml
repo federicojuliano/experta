@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun matrices.ejecucion.PruebaDelCodigo.pruebaCodigoDesdeArchivo" project="matrices" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="pruebaCodigoDesdeArchivo" classname="matrices.ejecucion.PruebaDelCodigo" time="0.034"/>
+</testrun>
