@@ -8,7 +8,6 @@ INDEX VERSION 1.130+C:\Workspaces eclipse\expertaart\.metadata\.plugins\org.ecli
 42444823.index
 245975571.index
 3967772612.index
-3671644699.index
 305402112.index
 3765369749.index
 1850717901.index

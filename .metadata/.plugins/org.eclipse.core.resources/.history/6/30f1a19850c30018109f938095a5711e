@@ -33,5 +33,6 @@ public class MatrizManagerTest {
 		int valorNuevo = 58;
 		matrizManager.actualizarCelda(2, 2, 2, valorNuevo);
 		Assert.assertEquals(valorNuevo, matriz.getMatriz()[2][2][2]);
+		
 	}
 }
